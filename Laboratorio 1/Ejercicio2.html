@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio - Formulario de Registro</title>
+    <style>
+
+        form {
+            width: 400px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <hr>
+
+    <form>
+        <label for="nombre">Nombre completo</label>
+        <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            required 
+            minlength="3" 
+            maxlength="30"
+            title="El nombre debe tener entre 3 y 30 caracteres">
+        <small>Debe tener entre 3 y 30 caracteres</small>
+
+        <label for="usuario">Nombre de usuario</label>
+        <input 
+            type="text" 
+            id="usuario" 
+            name="usuario" 
+            required 
+            pattern="[A-Za-z0-9_]{5,15}"
+            title="Solo letras, números y guion bajo. Entre 5 y 15 caracteres">
+        <small>Solo letras, números y guion bajo (5 a 15 caracteres)</small>
+
+        <label for="correo">Correo electrónico</label>
+        <input 
+            type="email" 
+            id="correo" 
+            name="correo" 
+            required
+            title="Ingresa un correo electrónico válido">
+        <small>Ejemplo: usuario@correo.com</small>
+
+        <label for="contrasena">Contraseña</label>
+        <input 
+            type="password" 
+            id="contrasena" 
+            name="contrasena" 
+            required 
+            minlength="8" 
+            maxlength="16"
+            pattern="(?=.*[A-Za-z])(?=.*\d).{8,16}"
+            title="Debe tener entre 8 y 16 caracteres, con al menos una letra y un número">
+        <small>Entre 8 y 16 caracteres, con al menos una letra y un número</small>
+
+        <label for="edad">Edad</label>
+        <input 
+            type="number" 
+            id="edad" 
+            name="edad" 
+            required 
+            min="18" 
+            max="99"
+            title="Debes tener entre 18 y 99 años">
+        <small>Debes ser mayor de 18 años</small>
+
+        <label for="telefono">Teléfono</label>
+        <input 
+            type="tel" 
+            id="telefono" 
+            name="telefono" 
+            required 
+            pattern="[0-9]{9}"
+            title="Debe contener 9 dígitos numéricos">
+        <small>9 dígitos, sin espacios ni guiones</small>
+
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>

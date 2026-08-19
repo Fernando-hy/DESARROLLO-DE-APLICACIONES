@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con validación</title>
+</head>
+<body>
+
+    <h1>Registro de datos</h1>
+
+    <form>
+
+        <p>
+            <label for="nombre">Nombre:</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                minlength="3"
+                maxlength="30">
+        </p>
+        <p>
+            <label for="correo">Correo electrónico:</label>
+
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                required>
+        </p>
+        <p>
+            <label for="telefono">Teléfono:</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                pattern="[0-9]{9}"
+                title="Ingrese un número de 9 dígitos"
+                required>
+        </p>
+
+
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
